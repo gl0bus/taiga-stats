@@ -622,7 +622,7 @@ def cmd_gen_cfd(args):
         legendProxies.append(plt.Line2D((0,1),(0,0), color=ideal_line[0].get_color(), linestyle=ideal_line[0].get_linestyle(), linewidth=ideal_line[0].get_linewidth()))
         selected_snames.append(ideal_line[0].get_label())
 
-    ax.legend(reversed(legendProxies), reversed(selected_snames), title="Color chart", loc='center left', bbox_to_anchor=(1, 0.5))
+    ax.legend(list(reversed(legendProxies)), list(reversed(selected_snames)), title="Color chart", loc='center left', bbox_to_anchor=(1, 0.5))
 
 
     out_file = CFD_OUT_PNG_FMT.format(get_tag_str(tag))
